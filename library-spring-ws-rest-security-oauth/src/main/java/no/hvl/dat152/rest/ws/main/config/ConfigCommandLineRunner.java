@@ -1,31 +1,25 @@
 package no.hvl.dat152.rest.ws.main.config;
 
 
-import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.boot.CommandLineRunner;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.stereotype.Component;
-
 import no.hvl.dat152.rest.ws.exceptions.AuthorNotFoundException;
-import no.hvl.dat152.rest.ws.model.Author;
-import no.hvl.dat152.rest.ws.model.Book;
-import no.hvl.dat152.rest.ws.model.Order;
-import no.hvl.dat152.rest.ws.model.Role;
-import no.hvl.dat152.rest.ws.model.User;
+import no.hvl.dat152.rest.ws.model.*;
 import no.hvl.dat152.rest.ws.repository.AuthorRepository;
 import no.hvl.dat152.rest.ws.repository.BookRepository;
 import no.hvl.dat152.rest.ws.repository.RoleRepository;
 import no.hvl.dat152.rest.ws.repository.UserRepository;
 import no.hvl.dat152.rest.ws.service.AuthorService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.stereotype.Component;
+
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 @Component
 class ConfigCommandLineRunner implements CommandLineRunner  {

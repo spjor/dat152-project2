@@ -3,11 +3,9 @@
  */
 package no.hvl.dat152.rest.ws.jpa.test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-import java.time.LocalDate;
-import java.util.List;
-
+import no.hvl.dat152.rest.ws.main.LibraryApplication;
+import no.hvl.dat152.rest.ws.model.Order;
+import no.hvl.dat152.rest.ws.repository.OrderRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -16,9 +14,10 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.test.context.ContextConfiguration;
 
-import no.hvl.dat152.rest.ws.main.LibraryApplication;
-import no.hvl.dat152.rest.ws.model.Order;
-import no.hvl.dat152.rest.ws.repository.OrderRepository;
+import java.time.LocalDate;
+import java.util.List;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
  * 

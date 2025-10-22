@@ -1,10 +1,10 @@
 package no.hvl.dat152.rest.ws.main.test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
-
-import java.util.List;
-
+import io.restassured.RestAssured;
+import io.restassured.response.Response;
+import no.hvl.dat152.rest.ws.exceptions.UserNotFoundException;
+import no.hvl.dat152.rest.ws.model.User;
+import no.hvl.dat152.rest.ws.service.UserService;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,11 +12,10 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 
-import io.restassured.RestAssured;
-import io.restassured.response.Response;
-import no.hvl.dat152.rest.ws.exceptions.UserNotFoundException;
-import no.hvl.dat152.rest.ws.model.User;
-import no.hvl.dat152.rest.ws.service.UserService;
+import java.util.List;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)

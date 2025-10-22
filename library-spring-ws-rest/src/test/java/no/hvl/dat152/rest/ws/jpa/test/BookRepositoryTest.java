@@ -1,10 +1,8 @@
 package no.hvl.dat152.rest.ws.jpa.test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-import java.util.List;
-import java.util.Optional;
-
+import no.hvl.dat152.rest.ws.main.LibraryApplication;
+import no.hvl.dat152.rest.ws.model.Book;
+import no.hvl.dat152.rest.ws.repository.BookRepository;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -14,9 +12,10 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.test.context.ContextConfiguration;
 
-import no.hvl.dat152.rest.ws.main.LibraryApplication;
-import no.hvl.dat152.rest.ws.model.Book;
-import no.hvl.dat152.rest.ws.repository.BookRepository;
+import java.util.List;
+import java.util.Optional;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @SpringBootTest
 @ContextConfiguration(classes = LibraryApplication.class)

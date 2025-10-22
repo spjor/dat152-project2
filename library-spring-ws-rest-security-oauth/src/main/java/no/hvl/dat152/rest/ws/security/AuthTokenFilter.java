@@ -3,9 +3,13 @@
  */
 package no.hvl.dat152.rest.ws.security;
 
-import java.io.IOException;
-import java.util.Optional;
-
+import jakarta.servlet.FilterChain;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import no.hvl.dat152.rest.ws.exceptions.UserNotFoundException;
+import no.hvl.dat152.rest.ws.model.User;
+import no.hvl.dat152.rest.ws.repository.UserRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,13 +19,8 @@ import org.springframework.security.oauth2.server.resource.authentication.JwtAut
 import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
 
-import jakarta.servlet.FilterChain;
-import jakarta.servlet.ServletException;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
-import no.hvl.dat152.rest.ws.exceptions.UserNotFoundException;
-import no.hvl.dat152.rest.ws.model.User;
-import no.hvl.dat152.rest.ws.repository.UserRepository;
+import java.io.IOException;
+import java.util.Optional;
 
 /**
  * @author tdoy

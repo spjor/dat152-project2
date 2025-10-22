@@ -3,17 +3,16 @@
  */
 package no.hvl.dat152.rest.ws.service;
 
-import java.util.List;
-
-import java.time.LocalDate;
+import no.hvl.dat152.rest.ws.exceptions.OrderNotFoundException;
+import no.hvl.dat152.rest.ws.model.Order;
+import no.hvl.dat152.rest.ws.repository.OrderRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
-import no.hvl.dat152.rest.ws.exceptions.OrderNotFoundException;
-import no.hvl.dat152.rest.ws.model.Order;
-import no.hvl.dat152.rest.ws.repository.OrderRepository;
+import java.time.LocalDate;
+import java.util.List;
 
 /**
  * @author tdoy

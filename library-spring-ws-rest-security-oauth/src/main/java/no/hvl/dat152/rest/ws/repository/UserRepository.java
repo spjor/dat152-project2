@@ -4,10 +4,10 @@
 package no.hvl.dat152.rest.ws.repository;
 
 
-import java.util.Optional;
+import no.hvl.dat152.rest.ws.model.User;
 import org.springframework.data.repository.CrudRepository;
 
-import no.hvl.dat152.rest.ws.model.User;
+import java.util.Optional;
 
 
 /**
