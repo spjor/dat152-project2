@@ -30,8 +30,8 @@ class BookRepositoryTest {
 		
 		Iterable<Book> books = bookRepo.findAll(Sort.by("title"));
 		System.out.println(books);
-		
-		assertTrue(books.iterator().next().getIsbn().equals("ghijk1234"));
+
+        assertEquals("ghijk1234", books.iterator().next().getIsbn());
 	}
 	
 	@Test
@@ -40,8 +40,8 @@ class BookRepositoryTest {
 		Pageable paging = PageRequest.ofSize(2);
 		Page<Book> books = bookRepo.findAll(paging);
 		System.out.println(books);
-		
-		assertTrue(books.getNumberOfElements() == 2);
+
+        assertEquals(2, books.getNumberOfElements());
 	}
 
 	@Test
@@ -49,8 +49,8 @@ class BookRepositoryTest {
 		
 		List<Book> books = bookRepo.findByTitleContaining("Software");
 		System.out.println(books);
-		
-		assertTrue(books.get(0).getIsbn().equals("abcde1234"));
+
+        assertEquals("abcde1234", books.get(0).getIsbn());
 	}
 	
 	@Test
@@ -58,8 +58,8 @@ class BookRepositoryTest {
 		
 		Optional<Book> book = bookRepo.findByIsbn("ghijk1234");
 		System.out.println(book.get());
-		
-		assertTrue(book.get().getIsbn().equals("ghijk1234"));
+
+        assertEquals("ghijk1234", book.get().getIsbn());
 	}
 	
 	@Test
@@ -67,8 +67,8 @@ class BookRepositoryTest {
 		
 		Book book = bookRepo.findBookByISBN("ghijk1234");
 		System.out.println(book);
-		
-		assertTrue(book.getIsbn().equals("ghijk1234"));
+
+        assertEquals("ghijk1234", book.getIsbn());
 	}
 
 }

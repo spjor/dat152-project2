@@ -37,8 +37,8 @@ class OrderRepositoryTest {
 		
 		List<Order> orders = orderRepo.findByUserId(1L);
 		System.out.println(orders.get(0));
-		assertTrue(orders.size() == 1);
-		assertTrue(orders.get(0).getIsbn().equals("ghijk1234"));
+        assertEquals(1, orders.size());
+        assertEquals("ghijk1234", orders.get(0).getIsbn());
 
 	}
 	
@@ -56,8 +56,8 @@ class OrderRepositoryTest {
 		System.out.println(orders.getContent());
 		System.out.println(orders.getSize());
 		System.out.println(orders.getTotalElements());
-		
-		assertTrue(orders.getNumberOfElements() == 2);
+
+        assertEquals(2, orders.getNumberOfElements());
 	}
 	
 	/**
@@ -71,8 +71,8 @@ class OrderRepositoryTest {
 		List<Order> orders = orderRepo.findOrderByExpiry(expiry, 2, 0);
 		
 		System.out.println(orders);
-		
-		assertTrue(orders.size() == 2);
+
+        assertEquals(2, orders.size());
 	}
 
 }

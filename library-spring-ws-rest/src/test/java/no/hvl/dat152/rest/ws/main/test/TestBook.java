@@ -32,7 +32,7 @@ class TestBook {
 	@Autowired
 	private AuthorService authorService;
 	
-	private String API_ROOT = "http://localhost:8090/elibrary/api/v1";
+	private final String API_ROOT = "http://localhost:8090/elibrary/api/v1";
 	
 	@DisplayName("JUnit test for @GetMapping(/books) endpoint")
 	@Test

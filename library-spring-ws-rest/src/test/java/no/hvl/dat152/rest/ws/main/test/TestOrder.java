@@ -24,7 +24,7 @@ class TestOrder {
 	@Autowired
 	private OrderService orderService;
 	
-	private String API_ROOT = "http://localhost:8090/elibrary/api/v1";
+	private final String API_ROOT = "http://localhost:8090/elibrary/api/v1";
 	
 	@DisplayName("JUnit test for filter by Expiry @GetMapping(/orders) endpoint")
 	@Test
@@ -50,7 +50,7 @@ class TestOrder {
 				.get(API_ROOT+"/orders");
 		
 		assertEquals(HttpStatus.OK.value(), response.getStatusCode());
-		assertTrue(response.jsonPath().getList("isbn").size() == 2);
+        assertEquals(2, response.jsonPath().getList("isbn").size());
 	}
 	
 	@DisplayName("JUnit test for @GetMapping(/orders/{id}) endpoint")

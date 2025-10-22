@@ -51,7 +51,7 @@ public class AuthorController {
     public ResponseEntity<Set<Book>> getAllBooksByAuthorId(@PathVariable int id) {
 
         try {
-            Set<Book> books = authorService.findBooksByAuthorId(id);;
+            Set<Book> books = authorService.findBooksByAuthorId(id);
             return new ResponseEntity<>(books, HttpStatus.OK);
         } catch (AuthorNotFoundException e) {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);

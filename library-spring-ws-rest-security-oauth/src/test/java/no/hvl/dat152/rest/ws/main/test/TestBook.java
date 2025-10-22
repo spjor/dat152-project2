@@ -33,7 +33,7 @@ class TestBook {
 	@Autowired
 	private AuthorService authorService;
 
-	private String API_ROOT = "http://localhost:8090/elibrary/api/v1";
+	private final String API_ROOT = "http://localhost:8090/elibrary/api/v1";
 	
 	@Value("${admin.token.test}") 
 	private String ADMIN_TOKEN;

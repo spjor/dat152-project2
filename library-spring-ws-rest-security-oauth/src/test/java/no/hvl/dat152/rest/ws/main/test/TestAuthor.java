@@ -20,7 +20,7 @@ import no.hvl.dat152.rest.ws.model.Author;
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
 class TestAuthor {
 
-	private String API_ROOT = "http://localhost:8090/elibrary/api/v1";
+	private final String API_ROOT = "http://localhost:8090/elibrary/api/v1";
 
 	@Value("${admin.token.test}") 
 	private String ADMIN_TOKEN;
