@@ -1,10 +1,8 @@
 package no.hvl.dat152.rest.ws.main.test;
 
-import io.restassured.RestAssured;
-import io.restassured.response.Response;
-import no.hvl.dat152.rest.ws.exceptions.AuthorNotFoundException;
-import no.hvl.dat152.rest.ws.exceptions.BookNotFoundException;
-import no.hvl.dat152.rest.ws.model.Author;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Value;
@@ -12,14 +10,17 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import io.restassured.RestAssured;
+import io.restassured.response.Response;
+import no.hvl.dat152.rest.ws.exceptions.AuthorNotFoundException;
+import no.hvl.dat152.rest.ws.exceptions.BookNotFoundException;
+import no.hvl.dat152.rest.ws.model.Author;
 
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
 class TestAuthor {
 
-	private final String API_ROOT = "http://localhost:8090/elibrary/api/v1";
+	private String API_ROOT = "http://localhost:8090/elibrary/api/v1";
 
 	@Value("${admin.token.test}") 
 	private String ADMIN_TOKEN;
