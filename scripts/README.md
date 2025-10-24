@@ -1,0 +1,1 @@
+Just some helper scripts to get tokens and make life easier while working with the project.
